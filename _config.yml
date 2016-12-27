@@ -6,7 +6,8 @@
 favicon: /favicon.ico
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+#keywords: "Hexo, NexT"
+keywords: "Canux, CHENG, Python, Linux, Django"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,7 +15,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
+since: 2013
 
 # Canonical, set a canonical link tag in your hexo, you could use it for your SEO of blog.
 # See: https://support.google.com/webmasters/answer/139066
@@ -29,10 +30,10 @@ canonical: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
-  #about: /about
-  archives: /archives
+  about: /about
+  categories: /categories
   tags: /tags
+  archives: /archives
   schedule: /schedule
   #commonweal: /404.html
 
@@ -43,16 +44,15 @@ menu:
 #   Key is the name of menu item and value is the name of FontAwsome icon. Key is case-senstive.
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
-  enable: false
+  enable: True
   #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
   categories: th
-  schedule: calendar
   tags: tags
   archives: archive
-  commonweal: heartbeat
-
+  schedule: calendar
+  # commonweal: heartbeat
 
 
 
@@ -123,8 +123,11 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
-  #LinkLabel: Link
+social:
+    GitHub: https://github.com/crazy-canux
+    Stackoverflow: http://stackoverflow.com/users/4344009/canux
+    LinkedIn: http://www.linkedin.com/profile/preview?locale=zh_CN&trk=prof-0-sb-preview-primary-button
+    E-mail: mailto:canuxcheng@gmail.com
 
 
 # Social Links Icons
@@ -137,14 +140,15 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocalItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
-  Weibo: weibo
+  LinkedIn: linkedin
+  stackoverflow: stack-overflow
+  E-mail: envelope
 
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
-#avatar:
+avatar: /uploads/avatar.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -159,7 +163,7 @@ toc:
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 #creative_commons: by-nc-sa
-#creative_commons:
+creative_commons: zero
 
 
 sidebar:
@@ -184,6 +188,12 @@ sidebar:
 #links_layout: inline
 #links:
   #Title: http://example.com/
+links_title: Links
+links:
+  CSDN: http://bbs.csdn.net/home
+  51CTO: http://bbs.51cto.com/
+  ChinaUnix: http://bbs.chinaunix.net/
+  ITPUB: http://www.itpub.net/forum.php
 
 
 # ---------------------------------------------------------------
@@ -204,7 +214,8 @@ custom_logo:
 # Available value:
 #    normal | night | night eighties | night blue | night bright
 # https://github.com/chriskempson/tomorrow-theme
-highlight_theme: normal
+#highlight_theme: normal
+highlight_theme: night eighties
 
 
 # Automatically scroll page to section which is under <!-- more --> mark.
@@ -214,7 +225,7 @@ scroll_to_more: true
 # Automatically Excerpt. Not recommand.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 
@@ -225,6 +236,11 @@ auto_excerpt:
   #description: ex. subscribe to my blog by scanning my public wechat account
 
 
+# Donate setting
+# site: source/uploads/
+reward_comment: 您的支持是我创作的动力!
+wechatpay: /uploads/wechatpay.jpg
+alipay: /uploads/alipay.jpg
 
 
 # ---------------------------------------------------------------
@@ -236,18 +252,21 @@ mathjax:
   enable: false
   cdn: //cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-
 # Swiftype Search API Key
 #swiftype_key:
+swiftype_key: xGAKY5LyK8xDYvH9zzcX
 
 # Baidu Analytics ID
 #baidu_analytics:
+#baidu_analytics: 8343378
 
 # Duoshuo ShortName
 #duoshuo_shortname:
+duoshuo_shortname: crazy-canux
 
 # Disqus
-#disqus_shortname:
+# disqus_shortname:
+#disqus_shortname: canux
 
 # Baidu Share
 # Available value:
@@ -260,6 +279,7 @@ mathjax:
 #jiathis:
 # Warning: JiaThis does not support https.
 #add_this_id:
+jiathis: true
 
 # Share
 #duoshuo_share: true
@@ -274,6 +294,7 @@ mathjax:
 
 # CNZZ count
 #cnzz_siteid:
+cnzz_siteid: 1258132457
 
 
 # Make duoshuo show UA
@@ -284,6 +305,9 @@ duoshuo_info:
   admin_enable: false
   user_id: 0
   #admin_nickname: Author
+
+# Make duoshuo show hot artical
+duoshuo_hotartical: true
 
 
 # Facebook SDK Support.
@@ -332,6 +356,7 @@ busuanzi_count:
 
 # Tencent analytics ID
 # tencent_analytics:
+#tencent_analytics: 55134199
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
 baidu_push: false
@@ -353,6 +378,12 @@ calendar:
   singleEvents: true
   maxResults: 250
 
+# Search
+# Tinysou - CN
+#tinysou_Key
+
+# SEO
+# Webluker
 
 #! ---------------------------------------------------------------
 #! DO NOT EDIT THE FOLLOWING SETTINGS
@@ -416,3 +447,4 @@ images: images
 
 # Theme version
 version: 5.0.2
+
